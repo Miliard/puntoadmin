@@ -12,14 +12,15 @@ class TareaController extends Controller
      */
     public function index()
     {
-        dd("hola");
+        
+    }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+        return view('tarea.create');
     }
 
     /**

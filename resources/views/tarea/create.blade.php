@@ -1,11 +1,11 @@
 @extends('tema.app')
 
-@section('title', "Inicio")
+@section('title', "Nueva Tarea")
 
 @section('contenido')
 
 <h3>
-  bienvenidos
+   Registrar Tarea
 </h3>
 
 @endsection

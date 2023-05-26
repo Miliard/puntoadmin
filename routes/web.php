@@ -16,7 +16,7 @@ Route::get('/', function () {
 // Route::redirect('/', '/login');
 
 Route::get('tarea/registrar', [TareaController::class,'create'])->name('tarea.create');
-
+ 
 
 Route::middleware([
     'auth:sanctum',
