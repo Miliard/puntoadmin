@@ -16,6 +16,7 @@ Route::get('/', function () {
 // Route::redirect('/', '/login');
 
 Route::get('tarea/registrar', [TareaController::class,'create'])->name('tarea.create');
+Route::post('tarea/guardar', [TareaController::class,'store'])->name('tarea.store');
  
 
 Route::middleware([

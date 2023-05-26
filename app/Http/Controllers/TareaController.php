@@ -12,7 +12,7 @@ class TareaController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -28,7 +28,7 @@ class TareaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**
