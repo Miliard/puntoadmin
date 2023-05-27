@@ -17,13 +17,15 @@ Route::get('/', function () {
 
 Route::get('tarea/registrar', [TareaController::class,'create'])->name('tarea.create');
 Route::post('tarea/guardar', [TareaController::class,'store'])->name('tarea.store');
- 
+Route::get('tarea/listar', [TareaController::class, 'index'])->name('tarea.index');
+
+
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
-    
+
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
