@@ -16,7 +16,7 @@
   <div class="row">
     <div class="col-sm-12">
       <h1>
-        el chele wil
+        Punto Admin
       </h1>
       <div class="col-sm-12">
         <a href="{{ route('tarea.create') }}" class="btn btn-link">Crear nueva tarea</a>
