@@ -40,7 +40,7 @@
                     <td>{{ $tarea->urgencia() }}</td>
                     <td>{{ $tarea->descripcion }}</td>
                     <td>
-
+                        <a href=" {{ route('tarea.edit', $tarea)}}">Editar</a>
                     </td>
 
                 </tr>
