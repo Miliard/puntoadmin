@@ -40,7 +40,11 @@
                     <td>{{ $tarea->urgencia() }}</td>
                     <td>{{ $tarea->descripcion }}</td>
                     <td>
+<<<<<<< HEAD
                         <a href=" {{ route('tarea.edit', $tarea)}}">Editar</a>
+=======
+
+>>>>>>> 8d2910829528f043a32adc5f73870e1d4534fd96
                     </td>
 
                 </tr>
