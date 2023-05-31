@@ -19,6 +19,9 @@ Route::get('tarea/registrar', [TareaController::class,'create'])->name('tarea.cr
 Route::post('tarea/guardar', [TareaController::class,'store'])->name('tarea.store');
 Route::get('tarea/listar', [TareaController::class, 'index'])->name('tarea.index');
 Route::get('tarea/{tarea}/editar', [TareaController::class, 'edit'])->name('tarea.edit');
+// Route::put('tarea/{tarea}/actualizar', [TareaController::class, 'update'])->name('tarea.update');
+   Route::put('tarea/{tarea}', [TareaController::class, 'update'])->name('tarea.update');
+
 
 
 

@@ -13,6 +13,10 @@
                 <th>
                     Nombre
                 </th>
+
+                <th>
+                    recibido
+                </th>
                 <th>
                     Finalizada
                 </th>
@@ -34,17 +38,15 @@
             @foreach ($tareas as $tarea)
                 <tr>
                     <td>{{ $tarea->nombre }}</td>
+                    <td>{{ $tarea->recibido }}</td>
                     <td>{{ $tarea->estaFinalizada() }}</td>
-                    <td>{{ \Carbon\Carbon::parse($tarea->fecha_limite)->format('h:i A d / m / Y') }}</td>
+                    <td>{{ \Carbon\Carbon::parse($tarea->fecha_limite)->format('h:iA d/m/Y') }}</td>
 
                     <td>{{ $tarea->urgencia() }}</td>
                     <td>{{ $tarea->descripcion }}</td>
                     <td>
-<<<<<<< HEAD
                         <a href=" {{ route('tarea.edit', $tarea)}}">Editar</a>
-=======
-
->>>>>>> 8d2910829528f043a32adc5f73870e1d4534fd96
+                        <a href=" {{ route('tarea.show', $tarea)}}">Editar</a>
                     </td>
 
                 </tr>

@@ -7,6 +7,7 @@
     <h3>
         Nombre y Numero del Cliente
     </h3>
+    
     <form action="{{ route('tarea.store') }}" method="POST">
         <x-tarea-form-body/>
     </form>

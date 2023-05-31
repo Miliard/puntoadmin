@@ -13,6 +13,7 @@ class Tarea extends Model
 
     protected $fillable = [
     'nombre',
+    'recibido',
     'descripcion',
     'finalizada',
     'fecha_limite',
@@ -21,10 +22,10 @@ class Tarea extends Model
 
     protected $dates = ['fecha_limite'];
 
-public const URGENCIAS = ['Baja', 'Normal', 'Alta'];
+    public const URGENCIAS = ['Baja', 'Normal', 'Alta'];
 
     public function urgencia () {
-        return self::URGENCIAS[$this->urgencia]; 
+        return self::URGENCIAS[$this->urgencia];
     }
 
     public function estaFinalizada()

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('tareas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 60);
+            $table->string('recibido', 60);
             $table->string('descripcion',)->nullable();
             $table->tinyInteger('finalizada')->default(0);
             $table->timestamp('fecha_limite');

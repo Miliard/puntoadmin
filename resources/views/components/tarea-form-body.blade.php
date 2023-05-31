@@ -1,17 +1,22 @@
 @csrf
 <div class="row">
     <div class="col-ms-12">
-        <label for="InputNombre" class="form-label">Nombre de la Tarea</label>
+        <label for="InputNombre" class="form-label">Nombre y nuemero del cliente</label>
         <input type="text" name="nombre" id="InputNombre" class="form-control" placeholder="..."
             value="{{ old('nombre',$tarea->nombre) }}">
     </div>
-
+     <div class="col-ms-12">
+        <label for="InputNombre" class="form-label">Recibido por: </label>
+        <input type="text" name="recibido" id="InputNombre" class="form-control" placeholder="..."
+            value="{{ old('recibido',$tarea->recibido) }}">
+    </div>
+                                        {{--===aqui va el checkbox =====--}}
     <div class="col-sm-4">
         <div class="form-check">
-            <input type="checkbox" name="finalizado" id="InputFinalizada" class="form-check-input" {{ $tarea->finalizada ? 'checked' : '' }}>
-
+            <input type="checkbox" name="finalizada" id="InputFinalizada" class="form-check-input" value="1" @checked(old('finalizada',$tarea->finalizada))>
             <label for="InputFinalizada" class="form-check-label">Finalizada</label>
         </div>
+                                            {{--================================= --}}
     </div>
 
     <div class="col-sm-4">
@@ -32,7 +37,7 @@
     <div class="col-ms-12">
         <label for="TextAreaDescripcion" class="form-label">Descripcion</label>
         <textarea name="descripcion" id="TextAreaDescripcion" cols="30" rows="10"
-            class="form-control">{{ old('descripcion') }}</textarea>
+            class="form-control">{{ old('descripcion', $tarea->descripcion) }}</textarea>
     </div>
     <div class="col-sm-12 text-end my-2">
         <button type="submit" class="btn btn-primary">

@@ -7,11 +7,12 @@
 <h3>
     Editar Tarea de: <i>{{$tarea->nombre}}</i>
 </h3>
-<form action="{{ route('tarea.store') }}" method="POST">
+<form action="{{ route('tarea.update', $tarea ) }}" method="POST">
+    @method('put')
     <x-tarea-form-body :tarea="$tarea"/>
- </form>
+</form>
 
- @if ($errors->any())
+@if ($errors->any())
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -21,5 +22,5 @@
     </div>
 @endif
 
-
 @endsection
+
