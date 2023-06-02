@@ -14,6 +14,8 @@
     <div class="col-sm-4">
         <div class="form-check">
             <input type="checkbox" name="finalizada" id="InputFinalizada" class="form-check-input" value="1" @checked(old('finalizada',$tarea->finalizada))>
+            {{--  <input type="checkbox" name="finalizada" id="InputFinalizada" class="form-check-input" value="1" {{ old('finalizada', $tarea->finalizada) ? 'checked' : '' }}>  --}}
+
             <label for="InputFinalizada" class="form-check-label">Finalizada</label>
         </div>
                                             {{--================================= --}}
@@ -30,7 +32,7 @@
     <div class="col-sm-4">
         <label for="InputFechaLimite" class="form-label">* Fecha Limite</label>
         <input type="datetime-local" name="fecha_limite" id="InputFechaLimite" class="form-control"
-               value="{{ old('fecha_limite', \Carbon\Carbon::parse($tarea->fecha_limite)->format('Y-m-d\TH:i')) }}">
+               value="{{ old('fecha_limite', \Carbon\Carbon::parse($tarea->fecha_limite)->format('h:i A d/m/Y')) }}">
     </div>
 
 
