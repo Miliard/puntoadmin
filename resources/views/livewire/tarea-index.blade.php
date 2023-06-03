@@ -1,5 +1,6 @@
 <div>
-    <div class="row">
+    <div class="table-responsive">
+         <div class="row">
         <div class="col-sm-4">
             <input type="text" name="" id="" placeholder="buscar" class="form-control" wire:model="busqueda">
         </div>
@@ -50,8 +51,8 @@
                     <td>{{ $tarea->urgencia() }}</td>
                     <td>{{ $tarea->descripcion }}</td>
                     <td>
-                        <a href=" {{ route('tarea.edit', $tarea)}}">Editar</a>
-                        <a href=" {{ route('tarea.show', $tarea)}}">Ver</a>
+                        <a href="{{ route('tarea.edit', $tarea) }}" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="{{ route('tarea.show', $tarea) }}" class="btn btn-secondary btn-sm">Ver</a>
                     </td>
 
                 </tr>
@@ -62,3 +63,5 @@
 
     {{$tareas->links()}}
 </div>
+    </div>
+
